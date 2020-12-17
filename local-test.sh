@@ -30,17 +30,6 @@ if [ -f "${TESTFILE}" ]; then
 	truncate -s 0 "${TESTFILE}" || { echo "Could not clean old test file ${TESTFILE}" ; exit 1; }
 fi
 
-echo "Seeding database"
-groovy -Ddb.host=localhost -Ddb.username=tester -Ddb.password=tester utils/Setup.groovy
-
-echo "Running tests"
-${PROJECTS_DIR}/vendor/apache-jmeter-5.2.1/bin/jmeter.sh -n \
-	-Ddb.host=localhost -Ddb.username=tester -Ddb.password=tester -Ddb.host=localhost -Ddb.name=leaf_users -Ddb.port=3306  \
-	-t "${PROJECTS_DIR}/leaf.jmx" -p "${PROJECTS_DIR}/properties/local.properties" -j "${PROJECTS_DIR}/logs/jmeter.log"
-
-echo "Tests complete"
-echo "Execution of tests are records in ./logs/RuntimeResults.csv"
-
 if [ -f "${REPORTFILE}" ]; then
 	echo "Generating report"
 	${PROJECTS_DIR}/vendor/apache-jmeter-5.2.1/bin/jmeter.sh -g "${REPORTFILE}" -o logs/report/
