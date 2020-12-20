@@ -1,4 +1,0 @@
-"C:\mySoftware\apache-jmeter-5.1.1\bin\jmeter" -n -t "C:\Users\VHAJITWangL\Desktop\myDaily\howto\seoc\jmeter\SEOC_Performance_Active_v1.jmx" -l "C:\Users\VHAJITWangL\Desktop\myDaily\howto\seoc\jmeter\results\SEOC_Active_v1_Summary.jtl" -e -o "C:\Users\VHAJITWangL\Desktop\myDaily\howto\seoc\jmeter\results"
-
-
-"C:\mySoftware\apache-jmeter-5.1.1\bin\jmeter" -n -t "C:\Users\VHAJITWangL\Desktop\myDaily\howto\seoc\jmeter\SEOCUI_Performance.jmx" -l "C:\Users\VHAJITWangL\Desktop\myDaily\howto\seoc\jmeter\UIresults\SEOCUI.jtl" -e -o "C:\Users\VHAJITWangL\Desktop\myDaily\howto\seoc\jmeter\UIresults"
