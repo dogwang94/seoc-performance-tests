@@ -4,7 +4,7 @@ The SEOC project utilizes these test scripts to continuously verify and test the
 
 ## Generate Performance Test Reposts
 
-1. cd C:\seoc-performance-tests\jmeter
+1. C:\seoc-performance-tests\setEnv.bat
 2. C:\seoc-performance-tests\local-run.bat
 3. run script to generate reports for below each
     Press 1 for /v1/seoc
